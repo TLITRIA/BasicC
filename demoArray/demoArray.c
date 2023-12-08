@@ -18,8 +18,13 @@
 
 int main()
 {
-    
-#if 1
+# if 1
+    int array[BUFFER_SIZE] = { 0 };
+#else
+    int array[BUFFER_SIZE];
+#endif
+
+#if 0
 /************************
  * 清理脏数据：
  * 方法一：初始化int array[BUFFER_SIZE] = {0};
@@ -28,11 +33,7 @@ int main()
  * 
  * 
 */
-# if 1
-    int array[BUFFER_SIZE] = { 0 };
-#else
-    int array[BUFFER_SIZE];
-#endif
+
     for (int idx = 0; idx < BUFFER_SIZE; idx++)
     {
         printf("array[%d] = %d\t", idx, array[idx]);
@@ -59,6 +60,9 @@ int main()
 #endif
 
     
+
+
+
 
 
     return 0;

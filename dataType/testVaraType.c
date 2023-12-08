@@ -148,7 +148,7 @@ int main()
     /* 且：只有满足两个条件才能返回1*/
 #endif
 
-
+#if 0
 // 作业
     char val1 = -1;
     int len = sizeof(val1);
@@ -171,6 +171,24 @@ int main()
     b = 3^3;
     printf("%d\n",b);
 
+#endif
+
+    /*******************
+     * 单目运算符
+     * 双目运算符
+     * 三目运算符
+     * 
+     * 
+     * 
+     * 
+    */
+
+   int num1 = 40;
+   int num2 = 30;
+   int num3 = (num1 > num2) ? 100 : 666;
+
+   printf("%d\n", num3);
+   
 
 
 

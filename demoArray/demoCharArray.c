@@ -53,10 +53,11 @@ int main()
     int buflen3 = sizeof(buffer3);//10
     
     printf("buflen1: %d\n", buflen1);
-    printf("&buffer1: %p\n", &buffer1);
     printf("buflen2: %d\n", buflen2);
-    printf("&buffer2: %p\n", &buffer2);
     printf("buflen3: %d\n", buflen3);
+
+    printf("&buffer1: %p\n", &buffer1);
+    printf("&buffer2: %p\n", &buffer2);
     printf("&buffer3: %p\n", &buffer3);
     
     

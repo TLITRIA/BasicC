@@ -11,7 +11,7 @@ enum STATUS_CODE
 };
 
 /* 宏定义 */
-/* 代码规范：宏必须使用大写*/
+/* 代码规范：宏必须使用大写 */
 #define COUNT_NUM   10
 #define RANGE_NUM   200
 

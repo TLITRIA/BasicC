@@ -24,10 +24,10 @@ int main()
 
 
     /*******************GDB**********************
-     * 区别：后一条的可执行文件更大，就因为 -g
+     * 
      * gcc demoString.c -o demoString
      * gcc -g demoString.c -o demoString
-     * 
+     * 区别：后一条的可执行文件更大，就因为 -g
      * 
      * kill -l
     */

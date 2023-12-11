@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+/* 常量 */
 const int g_num = 10;
 
 

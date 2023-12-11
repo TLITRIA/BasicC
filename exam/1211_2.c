@@ -90,7 +90,7 @@ int main()
     
     
 
-#if 1
+#if 0
     /* 4.strcat */
     char str1[BUFFER_SIZE1];
     char str2[BUFFER_SIZE2];

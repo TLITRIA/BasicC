@@ -41,7 +41,8 @@ int main()
      * OUT  数组长
     */
     printf("len:%d\n", len);
-    printf("len:%d\n", fstrlen(array1));
+    /* ANS */
+    printf("len:%d\n", fstrlen(array1));  
     
 
     /* 第二个 strcpy */
@@ -49,6 +50,7 @@ int main()
     memset(name, 0, sizeof(name));
     strcpy(name, "zhangSan");
     printf("name:%s\n", name);
+    
 
     /* 第三个 strcat */
     strcat(name, " is a boy");

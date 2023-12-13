@@ -1,17 +1,23 @@
 #include <stdio.h>
 #include <string.h>
-
+#include "myString.h"
 
 #define BUFFER_SIZE1   10
 #define BUFFER_SIZE2   10
-int fstrlen(char str[])
+int fstrlen(const char *pStr)
 {           //如果没有'\0'
-    int idx;
-    for ( idx = 0; str[idx] != '\0'; idx++ )
+    int count = 0;
+    
+    if (!pStr)
     {
-        
+        return count;
     }
-    return idx;
+    while (*pStr != '\0')
+    {
+        count++;
+        pStr++;
+    }
+    return count;
 }
 
 void fstrcpy(char str1[], char str2[])

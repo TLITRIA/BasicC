@@ -1,5 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include "calculateFunc.h"
+#include "myString.h"
 
 /* 函数的定义 */
 
@@ -72,6 +75,22 @@ int main()
     
     outc = calculateDiv(num1, num2);
     printf("%d / %d = %d\n", num1, num2, outc);
+
+
+    char *ptr = "hello\0 world";
+    int len = 0;
+#if 0
+    len = strlen(ptr);
+#else
+    len = fstrlen(ptr);
+#endif
+
+
+
+
+
+
+
 
 
     return 0;

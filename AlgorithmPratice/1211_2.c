@@ -9,11 +9,11 @@ int fstrlen(char str[])
     int idx;
     for ( idx = 0; str[idx] != '\0'; idx++ )
     {
-        if (idx > 500000)
-        {
-            idx = -1;
-            break;
-        }
+        // if (idx > 500000)
+        // {
+        //     idx = -1;
+        //     break;
+        // }
     }
     return idx;
 }

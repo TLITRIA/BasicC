@@ -31,14 +31,13 @@ void quickSort(int array[], int start, int end)
              * 则将array[right]‘填入’array[left]。
              * 再从左索引+1开始找，如果array[left] >= base
              * 则将array[left]‘填入’array[right]。
-             * 如此循环直到left+1=right，此时要不要判断？
+             * 如此循环直到left+1=right
             */
 
             while ( left < right && array[right] > base )
             {
                 right--;
             }
-
             if ( left < right )
             {
                 array[left] = array[right];
@@ -49,7 +48,6 @@ void quickSort(int array[], int start, int end)
             {
                 left++;
             }
-
             if ( left < right )
             {
                 array[right] = array[left];
@@ -97,4 +95,13 @@ int main()
  * 求出连续递增的数组，阶梯
  * [1,1,2,3,4,5,6,7,7,7,7,8,9]
  * [1,2,3,4,5,6,7,8,9]
+*/
+/***********
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
 */

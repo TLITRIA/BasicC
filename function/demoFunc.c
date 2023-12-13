@@ -84,7 +84,7 @@ int main()
 #else
     len = fstrlen(ptr);
 #endif
-
+    printf("len:%d\n", len);
 
 
 

@@ -39,7 +39,7 @@ int main()
     
 
 
-    /* Q3： 我要给字符串赋值 bug */
+    /* Q3：给字符串赋值 bug */
     char *ptr2 = NULL;//null是非法地址
 #if 1
     ptr2 = "shanghai";

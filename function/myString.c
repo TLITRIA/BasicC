@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 #include "myString.h"
 
 #define BUFFER_SIZE1   10
@@ -55,11 +54,11 @@ void fstrcat(char str1[], char str2[], int index)
     str1[idx+index] = '\0';
 }
 
-
+#if 0
 int main()
 {
 
-#if 0
+
     /* 1.strlen */
     char array[BUFFER_SIZE1] = "hellowold";   
     printf("len:%d\n", fstrlen(array)); 
@@ -119,12 +118,11 @@ int main()
 
 
 
-    
-#endif
-
 
 
 
 
     return 0;
 }
+    
+#endif

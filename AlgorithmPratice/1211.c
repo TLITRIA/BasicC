@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define ARRAY_LENGTH 20
-#define ARRAY_RANGE 1000
+#define ARRAY_LENGTH 5
+#define ARRAY_RANGE 10
 
 
 #define ENTER printf("\n")

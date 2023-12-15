@@ -1,8 +1,22 @@
 #include <stdio.h>
-#include "myString.h"
+#include <string.h>
+// #include "myString.h"
 
-#define BUFFER_SIZE1   10
-#define BUFFER_SIZE2   10
+#define BUFFER_SIZE1   32
+#define BUFFER_SIZE2   32
+
+/***
+ * fstrlen
+ * fstrcpy
+ * fstrcmp
+ * fstrcat
+*/
+
+#define PRINT_PTR(p)   \
+printf("%8s():&%-5s=0x%-6x,  %-5s=0x%-6x, *%-5s=0x%-6x\n", __FUNCTION__, \
+        #p, (unsigned int)(long)&(p), #p, (unsigned int)(long)p, #p, (unsigned int)(long)*p)
+
+
 int fstrlen(const char *pStr)
 {           //如果没有'\0'
     int count = 0;
@@ -11,6 +25,7 @@ int fstrlen(const char *pStr)
     {
         return count;
     }
+    
     while (*pStr != '\0')
     {
         count++;
@@ -44,6 +59,40 @@ int fstrcmp(char str1[], char str2[])
     return 0;
 }
 
+int ffstrcmp(char *dst1, char *dst2)
+{
+    if (*dst1 == '\0' || *dst2 == '\0')
+    {
+        return -2;
+    }
+
+    while ((*dst1 != '\0') && (*dst1 == *dst2))
+    {
+        dst1++;
+        dst2++;
+    }
+
+    int t;
+    t = *dst1 - *dst2;
+    if (t == 0)
+    {
+        return 0;
+    }
+    else if (t > 0)
+    {
+        return 1;
+    }
+    else
+    {
+        return -1;
+    }
+
+        
+    
+}
+
+
+
 void fstrcat(char str1[], char str2[], int index)
 {
     int idx = 0;
@@ -54,13 +103,16 @@ void fstrcat(char str1[], char str2[], int index)
     str1[idx+index] = '\0';
 }
 
-#if 0
+
+
+
+#if 1
 int main()
 {
-
+#if 0
 
     /* 1.strlen */
-    char array[BUFFER_SIZE1] = "hellowold";   
+    char array[BUFFER_SIZE1] = "helloworld";   
     printf("len:%d\n", fstrlen(array)); 
 #endif
 
@@ -74,18 +126,38 @@ int main()
     printf("name:%s\n", name);
 #endif
 
-#if 0
+#if 1
     /* 3.strcmp */
-    char str1[] = "ABCDEF";
-    char str2[] = "ABCDEf";
-    char str3[] = "ABCDEF";
-    char str4[] = "ABCDEG";
+    char str1[] = "abcdef";
+    char str2[] = "abcd";
+    char str3[] = "abcdefgh";
+    char str4[] = "abcdeg";
+    char str5[] = "aacdef";
+    char str6[] = "axcdef";
+    char str7[] = "\0";
 
-    printf("%d\n", fstrcmp(str1, str2));
-    printf("%d\n", fstrcmp(str1, str3));
-    printf("%d\n", fstrcmp(str1, str4));
-    printf("%d\n", fstrcmp(str3, str4));
+    printf("%s\n", str1);
+    printf("%c\n", *str1+6);
+
+
+    printf("%s-%s:%d\n", str1, str2, ffstrcmp(str1, str2));
+    printf("%s-%s:%d\n", str1, str3, ffstrcmp(str1, str3));
+    printf("%s-%s:%d\n", str1, str4, ffstrcmp(str1, str4));
+    printf("%s-%s:%d\n", str1, str5, ffstrcmp(str1, str5));
+    printf("%s-%s:%d\n", str1, str6, ffstrcmp(str1, str6));
+    printf("%s-%s:%d\n", str1, str7, ffstrcmp(str1, str7));
     
+
+    
+
+    
+
+
+
+
+
+
+
 
 #endif
     
@@ -120,7 +192,7 @@ int main()
 
 
 
-
+#endif
 
     return 0;
 }
